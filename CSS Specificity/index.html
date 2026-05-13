@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> css Specificity</title>
+<style>
+     /* The Specificity of this selector is 10*/
+    .css{
+        color: red;
+    }
+     /* The Specificity of this selector is 1+10=11*/
+   h1.cblue{
+        color: blue;
+    }
+    /* The Specificity of this selector is 10*/
+    .cyellow{
+        color: yellow;
+    }
+     /* The Specificity of this selector is 10*/
+    [data-x=a]{
+        color: aqua;
+    }
+     /* The Specificity of this selector is 1+10+10+10+10=41*/
+     a.harryclass.rohan-class[href]:hover {
+  color: red;
+}
+</style>
+
+</head>
+<body>
+    <h1 class="css cblue cyellow" data-x="a" > CSS Specificity</h1>
+ 
+</body>
+</html>
