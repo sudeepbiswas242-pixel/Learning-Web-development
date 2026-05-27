@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        body{
+            background-color: brown;
+        }
+        @media screen and(orientation: portrait) {
+            body{
+                border:2px solid  black ;
+        }
+    }
+        @media only screen and (max-width:455px){
+            body{
+                background-color: green;
+                
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+        .boxes{
+           display: flex;
+        }
+        .boxe{
+            width: 344px;
+            height: 344px;
+            background-color: rgb(100, 102, 182);
+             margin: 3px;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div>hello i am sudeep</div>
+    <div class="boxes">
+    <div class="boxe"></div>
+    <div class="boxe"></div>
+    <div class="boxe"></div>
+    </div>
+</body>
+</html>
