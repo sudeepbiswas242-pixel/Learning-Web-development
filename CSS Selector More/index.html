@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector More</title>
+    <style>
+        .box:first-child {
+            background-color: red;
+        }
+
+        .box::first-line {
+            color: yellow;
+        }
+        .boxes *{
+            color: blue;
+            border: 2px solid black;
+
+        }
+        [data-color=primary]{
+            padding: 35px;
+        }
+        box:nth-child(even){
+            background-color: aqua;
+        }
+        .boxes ::before{
+            contain: hii i am sudeep;
+        }
+        ::selection{
+            background-color: black;
+
+        }
+        input::placeholder{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-color="primary" class="boxes">
+        <div class="box">box1 Lorem ipsum dolor sit amet consectetur adipisicing elit. A quos nesciunt neque sit ullam
+            explicabo officiis in cumque non quae molestiae illo dicta delectus facere fugit atque voluptatum
+            reiciendis, quis distinctio eaque totam harum velit? Accusantium dolore quaerat dolorum quos aliquam quia
+            error id minima consectetur minus, ipsa odit cupiditate ad necessitatibus molestias laboriosam perspiciatis
+            quae, velit eius labore. Autem perferendis repellat, rem eum magni at quae excepturi consequuntur quisquam
+            ducimus unde adipisci commodi fugit temporibus deserunt dolore maxime ipsam reiciendis sapiente aperiam
+            doloribus rerum consectetur? Voluptatibus ipsa ullam nulla, praesentium numquam quos doloribus voluptates
+            dignissimos amet in cumque eligendi impedit cupiditate harum nostrum tempora temporibus eos possimus tenetur
+            aliquid asperiores soluta. Eligendi laudantium quos voluptatem sunt est quia expedita. In modi ducimus
+            praesentium error suscipit asperiores libero accusamus reprehenderit, repellat tempore eaque. Quam ut odio,
+            animi, voluptatum commodi eveniet, modi at delectus tempora consequuntur vitae accusantium tenetur!
+            Nesciunt, optio magni accusamus unde doloremque ipsum molestiae aliquid dolorum illo doloribus iusto
+            eligendi, natus et repellendus rem! Voluptate, eligendi tenetur modi velit in amet aliquam? Totam error
+            minus omnis veniam amet optio ab recusandae praesentium, quo, odit necessitatibus delectus! Placeat neque
+            deleniti sit minus obcaecati dolor, magni iure accusamus necessitatibus excepturi nisi rerum praesentium
+            autem cum, sunt molestias vero impedit. Atque assumenda accusamus ipsum nostrum laborum consequatur esse
+            sint neque hic consequuntur accusantium doloribus labore iste dolorem, ullam officiis iure repudiandae
+            voluptates corporis velit similique iusto fugiat? Vitae, excepturi nisi. Laboriosam ratione laudantium
+            voluptate. Esse, temporibus consectetur animi ipsum soluta commodi nemo? Iste, saepe dolore totam
+            doloremque, praesentium consequatur perspiciatis maxime modi fuga quasi harum facilis ut enim quis dolores
+            ad cumque omnis, commodi animi! Deserunt ex ipsa, sequi excepturi modi nulla nemo nostrum iste eum nam
+            asperiores ipsum alias omnis unde aliquam, exercitationem cupiditate accusamus deleniti distinctio impedit
+            aliquid porro quo. Corrupti fugit doloremque illum sed quas! Libero nemo vitae rerum expedita voluptatem
+            labore debitis fugit, incidunt at molestias! Optio eveniet fugiat id quam dicta quia vero animi sequi iusto
+            sapiente cum, recusandae obcaecati doloremque totam. Eveniet modi ipsam illo fuga explicabo, est harum
+            molestias sequi earum numquam doloribus totam deleniti ab animi nihil mollitia aliquid. Eos, accusantium
+            molestias error nisi natus maxime provident eius, numquam veniam iste totam id odit, quod alias recusandae
+            soluta quae blanditiis. Earum aut magnam voluptatem corrupti laborum doloribus ipsum eaque esse tempore nemo
+            porro dolorem itaque, officia dolore quos? Consectetur natus voluptatem, inventore ut dignissimos quidem
+            maxime ullam voluptates assumenda sunt sapiente ratione, optio nulla nisi? Voluptates aut sequi ullam quia
+            repellendus facere delectus, debitis libero ab unde cupiditate esse tempore earum. Ullam modi, ut
+            necessitatibus iste iure animi totam labore recusandae, officiis nostrum dolore voluptate eius omnis. Quo,
+            sint eligendi. Necessitatibus aliquid dicta deserunt, laboriosam ducimus corporis natus nobis!</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <input type="text" placeholder="type your name ">
+    </div>
+</body>
+
+</html>
