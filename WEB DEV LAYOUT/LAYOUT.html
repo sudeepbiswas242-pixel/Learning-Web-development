@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Website Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e8d98a;
+            color: #333;
+        }
+
+        /* Main website wrapper */
+        .container {
+            width: 1020px;
+            margin: 22px auto;
+            background: #f4f0d8;
+            padding: 10px;
+            border: 1px solid #d7d0a6;
+        }
+
+        /* ================= HEADER ================= */
+
+        .header {
+            height: 225px;
+            background:
+                radial-gradient(
+                    ellipse at 25% 100%,
+                    rgba(255,255,255,0.12),
+                    transparent 45%
+                ),
+                linear-gradient(
+                    145deg,
+                    #b9e91b,
+                    #a6db12
+                );
+
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #a7cf27;
+        }
+
+        /* Decorative curved shapes */
+        .header::before {
+            content: "";
+            position: absolute;
+            width: 850px;
+            height: 350px;
+            border: 2px solid rgba(255,255,255,0.08);
+            border-radius: 50%;
+            left: -300px;
+            top: -220px;
+            transform: rotate(20deg);
+        }
+
+        .header::after {
+            content: "";
+            position: absolute;
+            width: 900px;
+            height: 350px;
+            border: 2px solid rgba(255,255,255,0.08);
+            border-radius: 50%;
+            right: -300px;
+            top: -180px;
+            transform: rotate(25deg);
+        }
+
+        .header-content {
+            position: absolute;
+            top: 55px;
+            left: 630px;
+            z-index: 2;
+        }
+
+        .header h1 {
+            font-size: 34px;
+            font-weight: normal;
+            color: #111;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 17px;
+            color: #222;
+        }
+
+        /* ================= NAVIGATION ================= */
+
+        .navigation {
+            height: 70px;
+            margin-top: 8px;
+            border: 1px solid #d2cba7;
+            background: #f5f1da;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #222;
+            font-size: 17px;
+            padding: 20px 35px;
+        }
+
+        .navigation a:hover {
+            background: #dce653;
+        }
+
+        /* ================= CONTENT ================= */
+
+        .content {
+            display: grid;
+            grid-template-columns: 235px 1fr;
+            gap: 30px;
+            padding: 22px 10px 20px;
+        }
+
+        /* ================= SIDEBAR ================= */
+
+        .sidebar {
+            padding-right: 5px;
+        }
+
+        .side-title {
+            height: 52px;
+            background: #dce44e;
+            display: flex;
+            align-items: center;
+            padding-left: 12px;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .side-title span {
+            margin-right: 12px;
+            font-size: 18px;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0 12px 22px;
+        }
+
+        .menu li {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .menu li::before {
+            content: "▦";
+            font-size: 14px;
+            margin-right: 10px;
+            color: #555;
+        }
+
+        .menu a {
+            color: #555;
+            text-decoration: underline;
+        }
+
+        .block {
+            margin-top: 5px;
+        }
+
+        .block-content {
+            padding: 15px 12px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .block-content p {
+            margin-bottom: 18px;
+        }
+
+        /* ================= MAIN ================= */
+
+        .main {
+            padding-right: 5px;
+        }
+
+        .gallery-title {
+            font-size: 29px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .gallery-text {
+            font-size: 15px;
+            line-height: 1.6;
+            text-align: left;
+            margin-bottom: 38px;
+        }
+
+        /* Two columns */
+        .bottom-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+        }
+
+        .column h2 {
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .column p {
+            font-size: 15px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+        }
+
+        /* Read more buttons */
+        .read-more {
+            display: inline-block;
+            background: #c8e32a;
+            border: 1px solid #a8c525;
+            padding: 11px 18px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .read-more:hover {
+            background: #b5d61b;
+        }
+
+        /* ================= FOOTER ================= */
+
+        .footer {
+            height: 58px;
+            background: #c7e729;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #aed126;
+            font-size: 14px;
+            color: #222;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1050px) {
+            .container {
+                width: 95%;
+            }
+
+            .header-content {
+                left: 60%;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                width: 100%;
+                margin: 0;
+                padding: 5px;
+            }
+
+            .header {
+                height: 180px;
+            }
+
+            .header-content {
+                left: 40%;
+                top: 45px;
+            }
+
+            .header h1 {
+                font-size: 25px;
+            }
+
+            .navigation {
+                height: auto;
+                flex-wrap: wrap;
+            }
+
+            .navigation a {
+                padding: 15px;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .bottom-columns {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-content">
+                <h1>Enter Site Title</h1>
+                <p>Enter Site Slogan</p>
+            </div>
+        </header>
+
+
+        <!-- NAVIGATION -->
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">New Page</a>
+            <a href="#">New Page 2</a>
+            <a href="#">New Page 3</a>
+            <a href="#">New Page 4</a>
+            <a href="#">New Page 5</a>
+        </nav>
+
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+
+                <div class="side-title">
+                    <span>➜</span>
+                    Main Menu
+                </div>
+
+                <ul class="menu">
+                    <li><a href="#">Menu Item 1</a></li>
+                    <li><a href="#">Menu Item 2</a></li>
+                    <li><a href="#">Menu Item 3</a></li>
+                    <li><a href="#">Menu Item 4</a></li>
+                    <li><a href="#">Menu Item 5</a></li>
+                    <li><a href="#">Menu Item 6</a></li>
+                    <li><a href="#">Menu Item 7</a></li>
+                    <li><a href="#">Menu Item 8</a></li>
+                </ul>
+
+
+                <div class="block">
+
+                    <div class="side-title">
+                        <span>➜</span>
+                        Block
+                    </div>
+
+                    <div class="block-content">
+                        <p>Enter Block content here...</p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet,
+                            consectetuer adipiscing elit.
+                            Aenean commodo Lorem ipsum
+                            dolor sit amet, consectetuer
+                            adipiscing elit. Aenean
+                            commodo
+                        </p>
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+            <!-- MAIN CONTENT -->
+            <main class="main">
+
+                <h1 class="gallery-title">Gallery</h1>
+
+                <p class="gallery-text">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                    natoque penatibus et magnis dis parturient montes, nascetur
+                    ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+                    eu, pretium quis, sem. Nulla consequat massa quis enim.
+                    Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+                    arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                    justo. Nullam dictum felis eu pede mollis pretium. Integer
+                    tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+                    Aenean vulputate eleifend tellus. Aenean leo ligula,
+                    porttitor eu, consequat vitae, eleifend ac, enim.
+                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                    tellus. Phasellus viverra nulla ut metus varius laoreet.
+                    Quisque rutrum. Aenean imperdiet.
+                </p>
+
+
+                <div class="bottom-columns">
+
+                    <!-- SUBSCRIPTION -->
+                    <section class="column">
+                        <h2>Subscription</h2>
+
+                        <p>
+                            Etiam ultricies nisi vel augue. Curabitur ullamcorper
+                            ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas
+                            tempus, tellus eget condimentum rhoncus, sem quam
+                            semper libero, sit amet adipiscing sem neque sed ipsum.
+                            Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
+                            id, lorem. Maecenas nec odio et ant
+                        </p>
+
+                        <a href="#" class="read-more">Read more</a>
+                    </section>
+
+
+                    <!-- OTHER SERVICES -->
+                    <section class="column">
+                        <h2>Other Services</h2>
+
+                        <p>
+                            Etiam ultricies nisi vel augue. Curabitur ullamcorper
+                            ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas
+                            tempus, tellus eget condimentum rhoncus, sem quam
+                            semper libero, sit amet adipiscing sem neque sed ipsum.
+                            Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
+                            id, lorem. Maecenas nec odio et ant
+                        </p>
+
+                        <a href="#" class="read-more">Read more</a>
+                    </section>
+
+                </div>
+
+            </main>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            Copyright © 2014.
+        </footer>
+
+    </div>
+
+</body>
+</html>
